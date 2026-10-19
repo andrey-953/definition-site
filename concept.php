@@ -6,7 +6,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     die('Не указан идентификатор статьи.');
 }else{
     $id = (int)$_GET['id'];
-    $stmt = $pdo->prepare('SELECT  * FROM concepts WHERE id = :id');
+    $stmt = $pdo->prepare('SELECT concept, definition FROM concepts WHERE id = :id');
     $stmt->execute(['id' => $id]);
     $article = $stmt->fetch(PDO::FETCH_ASSOC);
 
