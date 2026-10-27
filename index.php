@@ -10,15 +10,15 @@ $concepts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Определения</title>
+    <title>Вовчик NEWS</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1 class="title">Определения</h1>
+    <h1 class="title">Вовчик NEWS</h1>
 
     <div class="add-concept">
         <form action="add.php" method="POST">
-            <input type="text" name="concept" placeholder="Новое определениe..." required>
+            <input type="text" name="concept" placeholder="Новоя новость..." required>
             <button type="submit">Добавить</button>
         </form>
     </div>
@@ -31,7 +31,7 @@ $concepts = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </a>
             <?php endforeach; ?>
         <?php else: ?>
-            <p class = "no-data">Определений пока нет.</p>
+            <p class = "no-data">Новостей пока нет.</p>
         <?php endif; ?>
     </div>
 </body>

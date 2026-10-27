@@ -20,7 +20,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Определения</title>
+    <title><?= htmlspecialchars($article['concept']) ?></title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,7 +28,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     <div class="definition"><?= nl2br(htmlspecialchars($article['definition'])) ?></div>
     
     <form action="addDefinition.php" method="POST">
-        <input type="text" name="definition" placeholder="Определениe..." required>
+        <input type="text" name="definition" placeholder="Новость..." required>
         <input type="hidden" name="id" value=<?= $id ?>>
         <button type="submit">Изменить</button>
     </form>
